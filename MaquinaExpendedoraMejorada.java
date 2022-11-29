@@ -108,7 +108,8 @@ public class MaquinaExpendedoraMejorada {
              totalDineroAcumulado = 0;
          }   
          else  {
-              cantidadDeDineroAVaciar = -1;
+             System.out.println("Error");
+             cantidadDeDineroAVaciar = -1;
          }
          return cantidadDeDineroAVaciar;
     }
