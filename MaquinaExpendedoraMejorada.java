@@ -12,32 +12,36 @@ public class MaquinaExpendedoraMejorada {
     private String estacionDestino;
     // Numero de billetes vendidos
     private int numeroBilletesVendidos;
+    // La maquina da premios o no
+    private boolean premios;
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
      * precio del billete y el origen y destino dados. Se asume que el precio
      * del billete que se recibe es mayor que 0.
      */
-    public MaquinaExpendedoraMejorada(int precioDelBillete, String origen, String destino) {
+    public MaquinaExpendedoraMejorada(boolean daPremios, int precioDelBillete, String origen, String destino) {
         precioBillete = precioDelBillete;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = origen;
         estacionDestino = destino;
         numeroBilletesVendidos = 0;
+        premios = daPremios;
     }
     
     /**
      * Crea una maquina expendedora de billetes de tren con el 
      * precio del billete el origen y el destino fijos.
      */
-    public MaquinaExpendedoraMejorada() {
+    public MaquinaExpendedoraMejorada(boolean daPremios) {
         precioBillete = 12;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = "Ponferrada";
         estacionDestino = "León";
         numeroBilletesVendidos = 0;
+        premios = daPremios;
     }
 
     /**
@@ -80,16 +84,23 @@ public class MaquinaExpendedoraMejorada {
             System.out.println("# " + precioBillete + " euros.");
             System.out.println("##################");
             System.out.println();         
-
             // Actualiza el total de dinero acumulado en la maquina
             totalDineroAcumulado = totalDineroAcumulado + precioBillete;
             // Reduce el balance del cliente actual dejandole seguir utilizando la maquina
             balanceClienteActual = balanceClienteActual - precioBillete;
             // Actualiza el numero de billetes vendidos
             numeroBilletesVendidos = numeroBilletesVendidos + 1;
+            if (premios = true) {
+            System.out.println("###############################################################");
+            System.out.println("# Ha ganado un desvuento del 25% en todas las tienas de Inditex");
+            System.out.println("###############################################################");
+        }
+        
         }
         else {
+            System.out.println("###############################");
             System.out.println("# Faltan " + cantidadDeDineroQueFalta + " euros");
+            System.out.println("###############################");
         }
     }
     
