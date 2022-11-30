@@ -92,7 +92,7 @@ public class MaquinaExpendedoraMejorada {
             numeroBilletesVendidos = numeroBilletesVendidos + 1;
             if (premios == true) {
             System.out.println("###############################################################");
-            System.out.println("# Ha ganado un desvuento de " + 25*precioBillete/100 + "en todas las tienas de Inditex");
+            System.out.println("# Ha ganado un desvuento de " + 25*precioBillete/100 + "€ en todas las tienas de Inditex");
             System.out.println("###############################################################");
             }
             else {
