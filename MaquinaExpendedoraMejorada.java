@@ -90,13 +90,15 @@ public class MaquinaExpendedoraMejorada {
             balanceClienteActual = balanceClienteActual - precioBillete;
             // Actualiza el numero de billetes vendidos
             numeroBilletesVendidos = numeroBilletesVendidos + 1;
-            if (premios = true) {
+            if (premios == true) {
             System.out.println("###############################################################");
             System.out.println("# Ha ganado un desvuento del 25% en todas las tienas de Inditex");
             System.out.println("###############################################################");
+            }
+            else {
+            }    
         }
         
-        }
         else {
             System.out.println("###############################");
             System.out.println("# Faltan " + cantidadDeDineroQueFalta + " euros");
