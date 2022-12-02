@@ -109,21 +109,21 @@ public class MaquinaExpendedoraMejorada {
                         System.out.println("###############################################################");
                     }    
                 }
-
-                else {
-                    System.out.println("###############################");
-                    System.out.println("# Faltan " + cantidadDeDineroQueFalta + " euros");
-                    System.out.println("###############################");
-                }
-            }
+            }    
             else {
-                System.out.println("#############################################");
-                System.out.println("Error, máximo de billetes permitidos vendidos");
-                System.out.println("#############################################");
+                 System.out.println("###############################");
+                System.out.println("# Faltan " + cantidadDeDineroQueFalta + " euros");
+                System.out.println("###############################");
             }
-        } 
-    }   
-
+         
+        }
+        else {
+            System.out.println("#############################################");
+            System.out.println("Error, máximo de billetes permitidos vendidos");
+            System.out.println("#############################################");
+        }
+    }
+    
     /**
      * Cancela la operacion de compra del cliente actual y le
      * devuelve al cliente el dinero que ha introducido hasta el momento
