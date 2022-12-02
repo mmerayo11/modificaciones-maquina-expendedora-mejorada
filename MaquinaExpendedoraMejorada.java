@@ -102,11 +102,11 @@ public class MaquinaExpendedoraMejorada {
                 // Actualiza el numero de billetes vendidos
                 numeroBilletesVendidos = numeroBilletesVendidos + 1;
                 if (premios == true) {
-                    System.out.println("###############################################################");
-                    System.out.println("# Ha ganado un desvuento de " + (25 * precioBillete / 100) + "€ en todas las tienas de Inditex");
-                    System.out.println("###############################################################");
-                }
-  
+                    if (numeroBilletesVendidos % 4 == 0 ) {
+                        System.out.println("###############################################################");
+                        System.out.println("# Ha ganado un desvuento de " + (25 * precioBillete / 100) + "€ en todas las tienas de Inditex");
+                        System.out.println("###############################################################");
+                    }    
             }
         
             else {
@@ -119,8 +119,9 @@ public class MaquinaExpendedoraMejorada {
             System.out.println("#############################################");
             System.out.println("Error, máximo de billetes permitidos vendidos");
             System.out.println("#############################################");
-        }
-    }    
+            }
+        } 
+    }   
     
     /**
      * Cancela la operacion de compra del cliente actual y le
